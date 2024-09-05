@@ -22,16 +22,21 @@ try{
 
 const mov = await fetchJson(`https://api.fgmods.xyz/api/downloader/tiktok?url=${q}&apikey=mnp3grlZ`)
 
-let yt = `\`✦ 𝗗𝗔𝗥𝗞 𝗦𝗛𝗨𝗧𝗘𝗥 𝗠𝗗 𝗩2 ✦\`
+let yt = `┠─❲ 🧛 𝗗𝗔𝗥𝗞 𝗬𝗔𝗦𝗛 𝗠𝗗 🧛 ❳─┨*
 
-        ❒ 𝗧𝗶𝗸𝘁𝗼𝗸 𝗗𝗼𝘄𝗻𝗹𝗼𝗱𝗲𝗿 ❒
+    *🧧 TIKTOK DOWNLOADER 🧧*
 
-    \`✦ Title :\` ${mov.result.title}
-      
-    \`✦ Region :\` ${mov.result.region}
-    
-    \`✦ Duration :\` ${mov.result.duration}
 
+*\`➤ Title :\`*  ${mov.result.title}
+
+
+*\`➤ Region :\`*  ${mov.result.region}
+
+
+*\`➤ Duration :\`*  ${mov.result.duration}
+
+
+*\`➤ Views :\`*  ${mov.result.views}
 `
                 let buttons = [{
                     name: "cta_url",
@@ -43,14 +48,14 @@ let yt = `\`✦ 𝗗𝗔𝗥𝗞 𝗦𝗛𝗨𝗧𝗘𝗥 𝗠𝗗 𝗩2 ✦\`
                 },
                 { name: 'single_select',
             buttonParamsJson: JSON.stringify({
-               title: 'Tap Here!',
+               title: 'SELECT TYPE )✨',
                sections: [{
                   rows: [{
-                     title: 'DOWNLOAD VIDEO NO WATERMARK',
+                     title: 'NO-WATERMARK',
                      // description: `X`,
                      id: prefix + `ttdl1 ${mov.result.play}`
                   }, {
-                     title: 'DOWNLOAD VIDEO WATERMARK',
+                     title: 'WITH-WATERMARK',
                      // description: `X`,
                      id: prefix + `ttdl2 ${mov.result.wmplay}`
                   }, {
