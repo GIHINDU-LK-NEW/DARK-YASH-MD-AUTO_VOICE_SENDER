@@ -1,4 +1,4 @@
-const config = require('../config')
+
 const { cmd, commands } = require('../command')
 const { getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, runtime, sleep, fetchJson} = require('../lib/functions')
 const oce = "`"
@@ -14,6 +14,7 @@ cmd({
 },
 async(conn, mek, m,{from, l, prefix, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
+const config = await readEnv();
   
   
   if (!q) return await reply('TEXT') 
@@ -50,6 +51,8 @@ let yt = `┠─❲ 🧛 𝗗𝗔𝗥𝗞 𝗬𝗔𝗦𝗛 𝗠𝗗 🧛 ❳─�
             buttonParamsJson: JSON.stringify({
                title: 'SELECT TYPE )✨',
                sections: [{
+		 "title":"please select a category",
+                 "highlight_label":"DARK-YASH-MD",
                   rows: [{
                      title: 'NO-WATERMARK',
                      // description: `X`,
